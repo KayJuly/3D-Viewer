@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>3D Viewer</title>
+	<link type="text/css" href="lib/default.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="overlay">
+		<div class="cv-spinner">
+			<span class="spinner"></span>
+		</div>
+	</div>
+			 
+	<div id="navigation" class="navigation">
+		<div class="sidebar">
+			<div class="logo">3D Viewer</div>
+			<div class="sidebar-header">
+				<div>
+					<a class="sub-title" href="#">File information</a>
+					<ul class="sub-items">
+						<li><div id='modal-gui1'></div></li>
+					</ul>
+				</div>
+				<div>
+					<a class="sub-title" href="#">Controller</a>
+					<ul class="sub-items">
+						<li><div id='modal-gui2'></div></li>
+						<li class="information"><h2>Tool</h2></li>
+						<li class="information center">
+							<div class="tooltip"><span class="tooltiptext">Zoom In</span><input type="button" id='plusBtn' class='icon' /></div>
+							<div class="tooltip"><span class="tooltiptext">Zoom Out</span><input type="button" id='minusBtn' class='icon' /></div>
+							<div class="tooltip"><span class="tooltiptext">Reset</span><input type="button" id='reloadBtn' class='icon' /></div>
+							<div class="tooltip"><span class="tooltiptext">Full Screen</span><input type="button" id='fullscreenBtn' class='icon' /></div>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<a class="sub-title" href="#">Location</a>
+					<ul class="sub-items">
+						<li class="information"><h2>Central</h2></li>
+						<li><span class="left">X:</span><span class="right" id="center_x"></span></li>
+						<li><span class="left">Y:</span><span class="right" id="center_y"></span></li>
+						<li><span class="left">Z:</span><span class="right" id="center_z"></span></li>
+					</ul>
+				</div>
+				<div>
+					<a class="sub-title" href="#">How to use</a>
+					<ul class="sub-items" style="display: none">
+						<li class="information"><h2>Mouse</h2></li>
+						<li><span class="left">Mouse Wheel</span><span class="right">Zoom</span></li>
+						<li><span class="left">Right Drag</span><span class="right">Move</span></li>
+						<li><span class="left">Left Drag</span><span class="right">Rotate</span></li>
+					</ul>
+				</div>
+				<div>
+					<a class="sub-title" href="#">About 3D Viewer</a>
+					<ul class="sub-items" style="display: none">
+						<li class="information">Powered by <a style="text-decoration: underline" href="https://threejs.org/" target="_blank">three.js</a><br />Copyright &copy; 2018 Kay Shoji</li>
+						<li class="information"> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	<div id="menu">
+		<img class='menuicon' src='lib/img/menu.png'/>
+	</div>
+
+	<script src="lib/jquery.js"></script>
+    <script src="lib/three.js"></script>
+	<script src="lib/dat.gui.min.js"></script>
+	<script src="lib/jquery.fullscreen.min.js"></script>
+
+	<script src="lib/encoding.js"></script>
+	<script src="lib/Detector.js"></script>
+	<script src="lib/stats.min.js"></script>
+	<script src="lib/OrbitControls.js"></script>
+
+	<script src="lib/PCDLoader.js"></script>
+	<script src="lib/XYZLoader.js"></script>
+
+	<script src="3d.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
+
